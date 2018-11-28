@@ -1,7 +1,8 @@
 node('maven_label') {
    def mvnHome
    stage('Preparation') { // for display purposes
-      git branch: '${branch}', url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      //git branch: '${branch}', url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      git branch: '${branch}', url: 'https://github.com/sscotts2004/visacard.git'
 
 
                
