@@ -1,10 +1,10 @@
-  node('maven-label') {
+node('maven_label') {
    def mvnHome
    stage('Preparation') { // for display purposes
-      
-     git branch: '${branch}', url: 'https://github.com/DevopsNov19/visacard.git'
+    git 'https://github.com/jglick/simple-maven-project-with-tests.git'
                
       mvnHome = tool name: 'maven-3.6.0', type: 'maven'
+
    }
    stage('Build') { // Run the maven build
       if (isUnix()) {
