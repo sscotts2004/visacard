@@ -1,7 +1,8 @@
 node('maven_label') {
    def mvnHome
    stage('Preparation') { // for display purposes
-      git branch: 'd${branch}', url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      git branch: '${branch}', url: 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
 
                
       mvnHome = tool name: 'maven-3.6.0', type: 'maven'
