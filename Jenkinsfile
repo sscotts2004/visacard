@@ -1,4 +1,11 @@
 @Library('pipeline-library-demo')_
+
+//#!/usr/bin/env groovy
+def greet(String name = 'human') {
+  echo "Good Morning, ${name}."
+}
+
+
 node('maven_label') {
    def mvnHome
    stage('Preparation') { // for display purposes
@@ -26,7 +33,10 @@ node('maven_label') {
    
    stage('sayhello') {
       sayHello "Edureka"
-      }
+      greet "Raj"
+
+   
+   }
    
    
 }   
